@@ -1,6 +1,7 @@
 import React from 'react';
 import backgroundImg from '../../Image/Rectangle 1.png'
 import Header from '../Header/Header';
+import HomeContent from '../HomeContent/HomeContent';
 import './Home.css'
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
             <div>
                  <img className="BackgroundImg" src={backgroundImg} alt=""/>
             </div>
-         <Header></Header>   
+         <Header></Header>
+         <HomeContent></HomeContent>   
         </div>
     );
 };
