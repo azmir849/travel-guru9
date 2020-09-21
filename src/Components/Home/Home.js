@@ -12,7 +12,6 @@ const Home = () => {
                  <img className="BackgroundImg" src={backgroundImg} alt=""/>
             </div>
             <div className="bg-transparent">
-               
                 <nav className="navbar navbar-light bg-light navForm  bg-transparent">
                     <form className="form-inline">
                         <input className="form-control bg-transparent form-text  mr-sm-2" type="search" placeholder="Search your Destination" aria-label="Search"/>

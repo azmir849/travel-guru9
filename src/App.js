@@ -12,6 +12,7 @@ import News from './Components/News/News';
 import Destination from './Components/Destination/Destination';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
+import LogIn from './Components/LogIn/LogIn';
 
 
 
@@ -37,9 +38,12 @@ function App() {
                     <Route path="/contact">
                       <Contact></Contact>
                     </Route>
-                       <Route path="*">
-                         <NoMatch></NoMatch>
-                       </Route>    
+                      <Route path="/login">
+                        <LogIn></LogIn>
+                      </Route>
+                        <Route path="*">
+                          <NoMatch></NoMatch>
+                        </Route>    
       </Switch>
     </Router>
   );
