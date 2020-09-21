@@ -19,27 +19,27 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route  exact path="/">
+        <Route  exact path="/">
           <Home/>
         </Route>
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/news">
-            <News></News>
-          </Route>
-          <Route path="/destinations">
-           <Destination></Destination>
-          </Route>
-          <Route path="/blog">
-            <Blog></Blog>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route>
-            <Route path="*">
-              <NoMatch></NoMatch>
-            </Route>    
+            <Route path="/news">
+              <News></News>
+            </Route>
+               <Route path="/destinations">
+                  <Destination></Destination>
+               </Route>
+                  <Route path="/blog">
+                    <Blog></Blog>
+                  </Route>
+                    <Route path="/contact">
+                      <Contact></Contact>
+                    </Route>
+                       <Route path="*">
+                         <NoMatch></NoMatch>
+                       </Route>    
       </Switch>
     </Router>
   );
