@@ -1,0 +1,35 @@
+.TravelGuruLogo{
+    position: absolute;
+    width: 120.26px;
+    height: 56px;
+    left: 135px;
+    top: 35px;
+}
+.navForm{
+    position: absolute;
+    text-decoration-color: white;
+    width: 206px;
+    height: 20px;
+    left: 300px;
+    top: 35px;
+}
+.nav li{
+    display: inline;
+    margin-left: 50px; 
+  }
+  .nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.877);
+    font-weight: bold;
+  }
+.navMenuArea{
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    left: 500px;
+    top: 50px;
+}
+.LogIn-btn{
+    padding: 5px 20px;
+    border-radius: 10px;
+}
