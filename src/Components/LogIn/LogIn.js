@@ -18,6 +18,7 @@ const LogIn = () => {
         error:''
     })
     const provider = new firebase.auth.GoogleAuthProvider();
+    const FBprovider = new firebase.auth.FacebookAuthProvider();
     const HandleGoogleLogIn =() =>{
         firebase.auth().signInWithPopup(provider)
         .then(res => {
@@ -29,6 +30,28 @@ const LogIn = () => {
             setUser(gmailUser);
             // console.log(displayName);
           }).catch(error => {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+    }
+    
+    const handleFbSignIn = () =>{
+        firebase.auth().signInWithPopup(FBprovider)
+        .then(function(result) {
+            const{displayName} = result.user;
+            const fbUser = {
+                isSignedIn:true,
+                name:displayName
+            }
+            setUser(fbUser);
+            // ...
+          }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -97,21 +120,24 @@ const LogIn = () => {
             <img className="LogInBgImg" src={LogInBgImg} alt=""/>
             <Header></Header>
           
-          <div>
-              <h1>LogIn Page</h1>
-              <input type="checkbox" onChange={()=> setNewUser(!newUser)}  name="newUser" id=""/>
-              <label htmlFor="newUser">Register Now</label>
+          <div className="form">
+              <h1>LogIn/Create new account</h1>
+              <input className="checkbox" type="checkbox" onChange={()=> setNewUser(!newUser)}  name="newUser" id=""/>
+              <label htmlFor="newUser">Create new account</label>
               <form onSubmit={handleSubmit}>
-                {newUser && <input type="text" onBlur={handleBlur} name="name" id="" placeholder="Name"/>}<br/>
-                <input type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
-                <input type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
-                <input type="submit" value="Submit Now"/>
+                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="name" id="" placeholder="First Name"/>}<br/>
+                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="name" id="" placeholder="Last Name"/>}<br/>
+                <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
+                <input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
+                {newUser &&<input className="input-teaxt-area" type="confirm-password" onBlur={handleBlur} name="confirm-password" id="" placeholder="Confirm Password" required/>}<br/>
+                <input className="submit-btn" type="submit" value={newUser ? 'Create an account' : 'LogIn'}/>
               </form>
              <p style={{color:'red'}}>{user.error}</p>
+             <h6 className="d-flex justify-content-center">Or</h6>
+             <button className="google-btn" onClick={HandleGoogleLogIn}>Continue with Google</button>
+             <button className="facebook-btn" onClick={handleFbSignIn}>Continue with Facebook</button>
             </div>
-            <button onClick={HandleGoogleLogIn}>Continue with Google</button>{
-            user.isSignedIn && <div> <p>{user.name}</p></div>
-          }
+            
         </div>
     );
 };
