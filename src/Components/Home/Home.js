@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
             <div>
-                 <img className="BackgroundImg" src={backgroundImg} alt=""/>
+                <img className="BackgroundImg" src={backgroundImg} alt=""/>
             </div>
             <div className="bg-transparent">
                 <nav className="navbar navbar-light bg-light navForm  bg-transparent">

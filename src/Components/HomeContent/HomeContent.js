@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Sajek from '../../Image/Sajek.png'
 import Sreemongal from '../../Image/Sreemongol.png'
 import Sundarban from '../../Image/sundorbon.png'
 import './HomeContent.css'
 
 const HomeContent = () => {
+   function HandleSajeckClick(){
+        console.log('sajeck clicked')
+    }
     return (
            <div>
                 <div className="card-deck Card">
-                <div className="card">
-                    <img src={Sajek} className="card-img-top" alt=""/>
+                <div className="card" >
+                    <img src={Sajek} onClick={HandleSajeckClick} className="card-img-top" alt=""/>
                     <h4>SAJEK</h4>
                 </div>
                 <div className="card">

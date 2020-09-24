@@ -4,6 +4,8 @@
     height: 56px;
     left: 135px;
     top: 35px;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
 }
 .navForm{
     position: absolute;
@@ -17,9 +19,9 @@
     display: inline;
     margin-left: 50px; 
   }
-  .nav a{
+  nav ul li a{
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.877);
+    color: white;
     font-weight: bold;
   }
 .navMenuArea{
