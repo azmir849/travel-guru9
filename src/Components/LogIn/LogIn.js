@@ -5,10 +5,12 @@ import Header from '../Header/Header';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../firebase.config';
+import { useHistory } from 'react-router-dom';
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
     const[newUser,setNewUser] =useState(false);
+    const history =useHistory();
     const [user ,setUser] = useState({
         isSignedIn:false,
         newUser:false,
@@ -28,6 +30,7 @@ const LogIn = () => {
                 name:displayName
             }
             setUser(gmailUser);
+            history.push('/search');
             // console.log(displayName);
           }).catch(error => {
             // Handle Errors here.
@@ -50,6 +53,7 @@ const LogIn = () => {
                 name:displayName
             }
             setUser(fbUser);
+            history.push('/search');
             // ...
           }).catch(function(error) {
             // Handle Errors here.
@@ -101,7 +105,7 @@ const LogIn = () => {
         if(!newUser && user.email && user.password){
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(res =>{
-                console.log("sign In successfully");
+               history.push('/search');
             })
             .catch(function(error) {
                 // Handle Errors here.
@@ -135,7 +139,7 @@ const LogIn = () => {
              <p style={{color:'red'}}>{user.error}</p>
              <h6 className="d-flex justify-content-center">Or</h6>
              <button className="google-btn" onClick={HandleGoogleLogIn}>Continue with Google</button>
-             <button className="facebook-btn" onClick={handleFbSignIn}>Continue with Facebook</button>
+            <button className="facebook-btn" onClick={handleFbSignIn}>Continue with Facebook</button>
             </div>
             
         </div>

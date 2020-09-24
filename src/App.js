@@ -13,6 +13,8 @@ import Destination from './Components/Destination/Destination';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import LogIn from './Components/LogIn/LogIn';
+import { Search } from '@material-ui/icons';
+import SearchPage from './Components/SearchPage/SearchPage';
 
 
 
@@ -35,6 +37,9 @@ function App() {
                   <Route path="/blog">
                     <Blog></Blog>
                   </Route>
+                    <Route path="/search">
+                     <SearchPage></SearchPage>
+                      </Route>
                     <Route path="/contact">
                       <Contact></Contact>
                     </Route>
