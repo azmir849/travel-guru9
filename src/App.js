@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -13,14 +13,14 @@ import Destination from './Components/Destination/Destination';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import LogIn from './Components/LogIn/LogIn';
-import { Search } from '@material-ui/icons';
 import SearchPage from './Components/SearchPage/SearchPage';
 
-
-
+export const UserContext = createContext();
 function App() {
+  const [loggedInUser,setLoggedInUser] = useState({});
   return (
-    <Router>
+    <UserContext.Provider value = {[loggedInUser,setLoggedInUser]}>
+      <Router>
       <Switch>
         <Route  exact path="/">
           <Home/>
@@ -51,6 +51,7 @@ function App() {
                         </Route>    
       </Switch>
     </Router>
+    </UserContext.Provider>
   );
 }
 

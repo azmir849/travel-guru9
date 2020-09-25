@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './LogIn.css'
 import LogInBgImg from '../../Image/Rectangle 1.png'
 import Header from '../Header/Header';
@@ -6,6 +6,7 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../firebase.config';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../App';
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
@@ -18,7 +19,10 @@ const LogIn = () => {
         email:'',
         password:'',
         error:''
-    })
+    });
+
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    
     const provider = new firebase.auth.GoogleAuthProvider();
     const FBprovider = new firebase.auth.FacebookAuthProvider();
     const HandleGoogleLogIn =() =>{
@@ -30,6 +34,7 @@ const LogIn = () => {
                 name:displayName
             }
             setUser(gmailUser);
+            setLoggedInUser(gmailUser);
             history.push('/search');
             // console.log(displayName);
           }).catch(error => {
@@ -53,6 +58,7 @@ const LogIn = () => {
                 name:displayName
             }
             setUser(fbUser);
+            setLoggedInUser(fbUser);
             history.push('/search');
             // ...
           }).catch(function(error) {
@@ -105,6 +111,10 @@ const LogIn = () => {
         if(!newUser && user.email && user.password){
             firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(res =>{
+                const newUserInfo = {...user};
+                newUserInfo.error = '';
+                setUser(newUserInfo);
+                setLoggedInUser(newUserInfo);
                history.push('/search');
             })
             .catch(function(error) {
