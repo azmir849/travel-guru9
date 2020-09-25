@@ -4,6 +4,7 @@ import hotelRoom from '../../Image/Rectangle 26.png'
 import hotelBed from '../../Image/Rectangle 27.png'
 import beach from '../../Image/Rectangle 28.png'
 import startRateIcon from '../../Icon/star_1_.png'
+import GoogleMap from '../GoogleMap/GoogleMap';
 
 const SearchPageElement = () => {
     return (
@@ -49,6 +50,7 @@ const SearchPageElement = () => {
                     <p className="costAndRating">4.9(25)  $44/night $167 total</p>
                 </div>
             </div> 
+            <GoogleMap></GoogleMap>
         </div>
     );
 };
