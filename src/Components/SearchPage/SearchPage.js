@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import  './SearchPage.css'
 import travelGuruLogo from '../../Icon/LogoBlack.png'
+import SearchPageElement from '../SearchPageElement/SearchPageElement';
 
 const SearchPage = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
@@ -29,6 +30,7 @@ const SearchPage = () => {
               <h4 className="UserName">{loggedInUser.name}</h4>
             </div>
             <div className="Divider"></div>
+            <SearchPageElement></SearchPageElement>
         </div>
     );
 };

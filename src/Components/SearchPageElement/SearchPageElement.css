@@ -1,0 +1,146 @@
+div p{
+    position: absolute;
+    left: 9.44%;
+    right: 75.56%;
+    top: 14.44%;
+    bottom: 83.33%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    color: #2B2B2B;
+
+}
+div h3{
+    position: absolute;
+    left: 9.44%;
+    right: 64.17%;
+    top: 17.44%;
+    bottom: 79.33%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+
+}
+.Room1Img img{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    left: 120px;
+    top: 215px;
+    border-radius: 5px;
+}
+.Room1textArea{
+    position: absolute;
+    width: 313.02px;
+    height: 189px;
+    left: 350px;
+    top: 214px;
+}
+.Service-title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+}
+.Room-service{
+    position: absolute;
+    left: 00.28%;
+    right: 20.98%;
+    top: 31%;
+    bottom: 66.78%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6A6A6A;
+}
+.Kitchen-service{
+    position: absolute;
+    left: 00.28%;
+    right: 20.96%;
+    top: 45.56%;
+    bottom: 63.22%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6A6A6A;
+}
+.cancellation{
+    position: absolute;
+    left: 00.28%;
+    right: 20.43%;
+    top: 60.44%;
+    bottom: 59.33%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #6A6A6A;
+}
+
+.StarRate{
+    position: absolute;
+    left: 00.28%;
+    right: 20.57%;
+    top: 75.17%;
+    bottom: 55.79%;
+}
+
+.costAndRating{
+    position: absolute;
+    left: 12.95%;
+    right: 20.44%;
+    top: 80.16%;
+    bottom: 55.62%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.Room2Img img{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    left: 120px;
+    top: 430px;
+    border-radius: 5px;
+}
+
+.Room2textArea{
+    position: absolute;
+    width: 313.02px;
+    height: 189px;
+    left: 350px;
+    top: 430px;
+}
+
+.Room3Img img{
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    left: 120px;
+    top: 650px;
+    border-radius: 5px;
+}
+
+.Room3textArea{
+    position: absolute;
+    width: 313.02px;
+    height: 189px;
+    left: 350px;
+    top: 650px;
+}
