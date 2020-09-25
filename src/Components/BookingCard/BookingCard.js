@@ -5,7 +5,7 @@ import './BookingCard.css'
 const BookingCard = () => {
     const history = useHistory();
     const handleBooking =() =>{
-        history.push("/search");
+        history.push("/login");
     }
     return (
         <div className="BookingCard">
