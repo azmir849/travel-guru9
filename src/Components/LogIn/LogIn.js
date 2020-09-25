@@ -145,7 +145,7 @@ const LogIn = () => {
                 {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="last-name" id="" placeholder="Last Name"/>}<br/>
                 <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
                 <input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
-                {newUser &&<input className="input-teaxt-area" type="confirm-password" onBlur={handleBlur} name="confirm-password" id="" placeholder="Confirm Password" required/>}<br/>
+                {newUser &&<input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Confirm Password" required/>}<br/>
                 <input className="submit-btn" type="submit" value={newUser ? 'Create an account' : 'LogIn'}/>
               </form>
              <p style={{color:'red'}}>{user.error}</p>
