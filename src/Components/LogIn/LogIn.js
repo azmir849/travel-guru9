@@ -97,6 +97,7 @@ const LogIn = () => {
                 const newUserInfo = {...user};
                 newUserInfo.error = '';
                 setUser(newUserInfo);
+                setLoggedInUser(newUserInfo);
                 window.alert("Create account suuccessfully.Uncheck toggle to LogIn");
             })
             .catch(error =>{

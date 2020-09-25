@@ -1,0 +1,42 @@
+.BookingCard{
+    position: absolute;
+    width: 370px;
+    height: 355px;
+    left: 735px;
+    top: 310px;
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: white;
+}
+
+.BookingCard p{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.text-area{
+    width: 320px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.tab{
+    margin-top: 15px;
+    margin-bottom: -3px;
+}
+.dateForm{
+    width: 153px;
+    margin-left: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.booking-btn{
+    width: 300px;
+    padding: 5px;
+    margin-left: 30px;
+    margin-top: 35px;
+    border-radius: 10px;
+    background-color: tomato;
+}

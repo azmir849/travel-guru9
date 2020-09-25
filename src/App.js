@@ -14,6 +14,9 @@ import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import LogIn from './Components/LogIn/LogIn';
 import SearchPage from './Components/SearchPage/SearchPage';
+import Booking from './Components/Booking/Booking';
+import Sreemangal from './Components/Sreemangal/Sreemangal';
+import Sundarban from './Components/Sundarban/Sundarban';
 
 export const UserContext = createContext();
 function App() {
@@ -43,6 +46,15 @@ function App() {
                     <Route path="/contact">
                       <Contact></Contact>
                     </Route>
+                      <Route path="/booking">
+                        <Booking></Booking>
+                     </Route>
+                      <Route path="/sreemangal">
+                         <Sreemangal></Sreemangal>
+                      </Route>
+                      <Route path="/sundarban">
+                         <Sundarban></Sundarban>
+                      </Route>
                       <Route path="/login">
                         <LogIn></LogIn>
                       </Route>
