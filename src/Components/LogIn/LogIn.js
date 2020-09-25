@@ -97,6 +97,7 @@ const LogIn = () => {
                 const newUserInfo = {...user};
                 newUserInfo.error = '';
                 setUser(newUserInfo);
+                window.alert("Create account suuccessfully.Uncheck toggle to LogIn");
             })
             .catch(error =>{
                 // Handle Errors here.
@@ -140,7 +141,7 @@ const LogIn = () => {
               <label htmlFor="newUser">Create new account</label>
               <form onSubmit={handleSubmit}>
                 {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="name" id="" placeholder="First Name"/>}<br/>
-                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="name" id="" placeholder="Last Name"/>}<br/>
+                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="last-name" id="" placeholder="Last Name"/>}<br/>
                 <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
                 <input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
                 {newUser &&<input className="input-teaxt-area" type="confirm-password" onBlur={handleBlur} name="confirm-password" id="" placeholder="Confirm Password" required/>}<br/>
