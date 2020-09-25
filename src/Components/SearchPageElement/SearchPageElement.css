@@ -1,4 +1,4 @@
-div p{
+.PlaceTitle{
     position: absolute;
     left: 9.44%;
     right: 75.56%;
@@ -13,7 +13,7 @@ div p{
     color: #2B2B2B;
 
 }
-div h3{
+.PlaceName{
     position: absolute;
     left: 9.44%;
     right: 64.17%;

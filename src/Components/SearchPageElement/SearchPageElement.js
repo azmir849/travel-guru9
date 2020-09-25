@@ -8,8 +8,8 @@ import startRateIcon from '../../Icon/star_1_.png'
 const SearchPageElement = () => {
     return (
         <div>
-            <p>252 stays Apr 13-173 guests</p>
-            <h3>Stays in Cox's Bazar</h3>
+            <p className="PlaceTitle">252 stays Apr 13-173 guests</p>
+            <h3 className="PlaceName">Stays in Cox's Bazar</h3>
             <div className="Room1">
                 <div className="Room1Img">
                     <img src={hotelRoom} alt=""/>
