@@ -17,6 +17,7 @@ import SearchPage from './Components/SearchPage/SearchPage';
 import Booking from './Components/Booking/Booking';
 import Sreemangal from './Components/Sreemangal/Sreemangal';
 import Sundarban from './Components/Sundarban/Sundarban';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 function App() {
@@ -40,9 +41,9 @@ function App() {
                   <Route path="/blog">
                     <Blog></Blog>
                   </Route>
-                    <Route path="/search">
+                    <PrivateRoute path="/search">
                      <SearchPage></SearchPage>
-                      </Route>
+                      </PrivateRoute>
                     <Route path="/contact">
                       <Contact></Contact>
                     </Route>
