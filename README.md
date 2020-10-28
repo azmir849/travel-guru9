@@ -18,3 +18,5 @@
          1.React JS
          2.React Router DOM
          3.Bootstrap
+
+[Check Resume](https://drive.google.com/file/d/1_0eZO_h3JKPcZaPsW4e_C0K3I8QEN6QU/view?usp=sharing)
