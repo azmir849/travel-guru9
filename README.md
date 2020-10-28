@@ -16,5 +16,5 @@
 
 ### Framework and Libraries
          1.React JS
-         3.React Router DOM
-         4.Bootstrap
+         2.React Router DOM
+         3.Bootstrap
