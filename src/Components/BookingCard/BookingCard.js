@@ -10,9 +10,9 @@ const BookingCard = () => {
     return (
         <div className="BookingCard">
            <p>Origin</p>
-           <input className="text-area" type="text" name="JourneyFrom" id="" placeholder="Dhaka"/>
+           <input className="text-area" type="text" name="JourneyFrom" id="" placeholder="From"/>
            <p>Destination</p>
-           <input className="text-area" type="text" name="JourneyTo" id="" placeholder="Sajek"/>
+           <input className="text-area" type="text" name="JourneyTo" id="" placeholder="Destination"/>
            <pre class="tab">   From                  To</pre>
            <input className="dateForm" type="date" name="JourneyFrom" id=""/>
            <input className="dateForm" type="date" name="JourneyTo" id=""/><br/>

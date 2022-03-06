@@ -4,5 +4,11 @@
     height: 980px;
     background-repeat: no-repeat;
 }
+ form input {
+     margin-left: 10px;
+ }
 
-
+ nav {
+     margin-left: 300px;
+     text-decoration: none;
+ }

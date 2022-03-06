@@ -2,7 +2,7 @@
     position: absolute;
     width: 50%;
     height: 20%;
-    left: 635px;
+    left: 680px;
     top: 236px;
 }
 .card{
@@ -20,9 +20,8 @@
 }
 .cardInformation{
     position: absolute;
-    width: 378.53px;
-    height: 116px;
-    left: 135px;
+    width: 30%;
+    left: 100px;
     top: 296px;
     color: whitesmoke;
 }

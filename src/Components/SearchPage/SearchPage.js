@@ -10,7 +10,7 @@ const SearchPage = () => {
     return (
         <div>
              <div>
-                <img className="searchNavBarLogo" src={travelGuruLogo} alt=""/>
+               <Link to='/'> <img className="searchNavBarLogo" src={travelGuruLogo} alt=""/></Link>
               <nav className="NavListArea">
                 <ul>
                     <li>

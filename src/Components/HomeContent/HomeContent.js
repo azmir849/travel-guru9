@@ -34,9 +34,9 @@ const HomeContent = () => {
                 </div>
             </div>
              <div className="cardInformation">
-             <h1>SAJEK</h1>
-             <p>Sajek was unexplored for a long time and recently it emerged as a tourist spot for it’s outstanding natural beauty.</p>
-             <button  onClick={handleSajek} className="btn-warning Booking-btn">Booking Now</button>
+             <h5>Travelling removes our monotony and gives pleasure. Similarly, it also broadens our outlook and refreshes our mind. 
+             A good traveler can easily educate others. He can give us first-hand knowledge of men and matters of other country.</h5>
+             <button  onClick={handleSajek} className="btn-warning Booking-btn">Travel Now</button>
          </div>
       </div>
     );

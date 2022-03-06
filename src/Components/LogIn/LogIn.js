@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import './LogIn.css'
-import LogInBgImg from '../../Image/Rectangle 1.png'
+import backgroundImg from '../../Image/Rectangle 1.png'
 import Header from '../Header/Header';
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from '../../firebase.config';
 import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../App';
+import { Link } from 'react-router-dom';
 firebase.initializeApp(firebaseConfig);
 
 const LogIn = () => {
@@ -133,20 +134,20 @@ const LogIn = () => {
     }
     return (
         <div>
-            <img className="LogInBgImg" src={LogInBgImg} alt=""/>
+             <Link to='/'> <img className="BackgroundImg" src={backgroundImg} alt=""/></Link> 
             <Header></Header>
           
           <div className="form">
               <h1>LogIn/Create new account</h1>
               <input className="checkbox" type="checkbox" onChange={()=> setNewUser(!newUser)}  name="newUser" id=""/>
-              <label htmlFor="newUser">Create new account</label>
+              <label htmlFor="newUser">{newUser?'Create new account':'Login'}</label>
               <form onSubmit={handleSubmit}>
-                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="name" id="" placeholder="First Name"/>}<br/>
-                {newUser && <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="last-name" id="" placeholder="Last Name"/>}<br/>
-                <input className="input-teaxt-area" type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
-                <input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
-                {newUser &&<input className="input-teaxt-area" type="password" onBlur={handleBlur} name="password" id="" placeholder="Confirm Password" required/>}<br/>
-                <input className="submit-btn" type="submit" value={newUser ? 'Create an account' : 'LogIn'}/>
+                {newUser && <input className="input-teaxt-area bg-white" type="text" onBlur={handleBlur} name="name" id="" placeholder="First Name"/>}<br/>
+                {newUser && <input className="input-teaxt-area bg-white" type="text" onBlur={handleBlur} name="last-name" id="" placeholder="Last Name"/>}<br/>
+                <input className="input-teaxt-area bg-white" type="text" onBlur={handleBlur} name="email" id="" placeholder="Email address" required/><br/>
+                <input className="input-teaxt-area bg-white" type="password" onBlur={handleBlur} name="password" id="" placeholder="Password" required/><br/>
+                {newUser &&<input className="input-teaxt-area bg-white" type="password" onBlur={handleBlur} name="password" id="" placeholder="Confirm Password" required/>}<br/>
+                <input className="submit-btn" type="submit" value={newUser ? 'Signup Now' : 'LogIn now'}/>
               </form>
              <p style={{color:'red'}}>{user.error}</p>
              <h6 className="d-flex justify-content-center">Or</h6>

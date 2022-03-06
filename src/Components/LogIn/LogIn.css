@@ -12,6 +12,8 @@
     border: 1px solid #ABABAB;
     box-sizing: border-box;
     border-radius: 10px;
+    outline: none;
+    border: #F9A51A;
 
 }
 .form h1{
@@ -31,6 +33,7 @@
     width: 450px;
     margin-bottom: 10px;
     margin-left: 60px;
+    outline: none;
 }
 .submit-btn{
     height: 30px;

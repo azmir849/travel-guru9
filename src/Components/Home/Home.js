@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import backgroundImg from '../../Image/Rectangle 1.png'
 
 import Header from '../Header/Header';
@@ -9,12 +10,12 @@ const Home = () => {
     return (
         <div>
             <div>
-                <img className="BackgroundImg" src={backgroundImg} alt=""/>
+              <Link to='/'> <img className="BackgroundImg" src={backgroundImg} alt=""/></Link> 
             </div>
             <div className="bg-transparent">
                 <nav className="navbar navbar-light bg-light navForm  bg-transparent">
                     <form className="form-inline">
-                        <input className="form-control bg-transparent form-text  mr-sm-2" type="search" placeholder="Search your Destination" aria-label="Search"/>
+                        <input className="form-control bg-transparent-90 form-text  mr-sm-2" type="search" placeholder="Search your Destination" aria-label="Search"/>
                     </form>
                 </nav>
             </div>
