@@ -15,7 +15,7 @@ const Home = () => {
             <div className="bg-transparent">
                 <nav className="navbar navbar-light bg-light navForm  bg-transparent">
                     <form className="form-inline">
-                        <input className="form-control bg-transparent-90 form-text  mr-sm-2" type="search" placeholder="Search your Destination" aria-label="Search"/>
+                        <input className="form-control bg-transparent-90 form-text" type="search" placeholder="Search Destination" aria-label="Search"/>
                     </form>
                 </nav>
             </div>
